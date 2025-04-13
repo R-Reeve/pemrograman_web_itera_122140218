@@ -9,4 +9,7 @@
   ![Screenshot Soal 3](./MuhammadSabdaArif_122140218_Pertemuan1/images/pertemuan1_soal3.png)
 
 - [Pertemuan 2](https://pemrograman-web-itera-122140218-pertemuan2.vercel.app)  
-  ![Screenshot Pertemuan 2](./screenshots/pertemuan2.png)
+  ![Screenshot To-doList](./MuhammadSabdaArif_122140218_Pertemuan2/images/pertemuan2_To-doList.png)
+  ![Screenshot Pomodoro](./MuhammadSabdaArif_122140218_Pertemuan2/images/pertemuan2_pertemuan2_Pomodoro.png)
+  ![Screenshot Heisenhower Matrix](./MuhammadSabdaArif_122140218_Pertemuan2/images/pertemuan2_pertemuan2_HeisenhowerMatrix.png)
+  ![Screenshot Getting Things Done](./MuhammadSabdaArif_122140218_Pertemuan2/images/pertemuan2_pertemuan2_GettingThingsDone.png)
