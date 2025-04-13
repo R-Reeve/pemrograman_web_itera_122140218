@@ -3,13 +3,13 @@
 
 ## Daftar Pertemuan
 
-- [Pertemuan 1](https://pemrograman-web-itera-122140218-pertemuan1.vercel.app)  
+- [Hasil Deploy Pertemuan 1](https://pemrograman-web-itera-122140218-pertemuan1.vercel.app)  
   ![Screenshot Soal 1](./MuhammadSabdaArif_122140218_Pertemuan1/images/pertemuan1_soal1.png)  
   ![Screenshot Soal 2](./MuhammadSabdaArif_122140218_Pertemuan1/images/pertemuan1_soal2.png)  
   ![Screenshot Soal 3](./MuhammadSabdaArif_122140218_Pertemuan1/images/pertemuan1_soal3.png)
 
-- [Pertemuan 2](https://pemrograman-web-itera-122140218-pertemuan2.vercel.app)  
+- [Hasil Deploy Pertemuan 2](https://pemrograman-web-itera-122140218-pertemuan2.vercel.app)  
   ![Screenshot To-doList](./MuhammadSabdaArif_122140218_Pertemuan2/images/pertemuan2_To-doList.png)
-  ![Screenshot Pomodoro](./MuhammadSabdaArif_122140218_Pertemuan2/images/pertemuan2_pertemuan2_Pomodoro.png)
-  ![Screenshot Heisenhower Matrix](./MuhammadSabdaArif_122140218_Pertemuan2/images/pertemuan2_pertemuan2_HeisenhowerMatrix.png)
-  ![Screenshot Getting Things Done](./MuhammadSabdaArif_122140218_Pertemuan2/images/pertemuan2_pertemuan2_GettingThingsDone.png)
+  ![Screenshot Pomodoro](./MuhammadSabdaArif_122140218_Pertemuan2/images/pertemuan2_Pomodoro.png)
+  ![Screenshot Heisenhower Matrix](./MuhammadSabdaArif_122140218_Pertemuan2/images/pertemuan2_HeisenhowerMatrix.png)
+  ![Screenshot Getting Things Done](./MuhammadSabdaArif_122140218_Pertemuan2/images/pertemuan2_GettingThingsDone.png)
