@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- Mengatur format teks jadi UTF-8 biar semua karakter bisa ditampilkan -->
+  <meta charset="UTF-8" />
+  <!-- Biar tampilan web responsif di layar HP, tablet, dll -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Judul halaman yang muncul di tab browser -->
+  <title>Dashboard Keju Saya</title>
+  <!-- Menghubungkan file CSS untuk desain/tampilan -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Bagian atas halaman (judul dashboard) -->
+    <header>
+      <h1>Dashboard Produktivitas</h1>
+    </header>
+
+    <main>
+      <!-- Penjelasan fitur To-do List -->
+      <details class="info-box">
+        <summary><strong>To-do List</strong></summary>
+        <!-- Paragraf ini kasih tahu fungsi dari fitur to-do -->
+        <p>
+          Fitur ini membantu kamu mencatat tugas-tugas harian. Cukup ketik tugas di kolom, lalu klik "Tambah". Tugasmu akan muncul di daftar.
+        </p>
+        <!-- Info tambahan buat bantu ngerti cara pakainya -->
+        <ul>
+          <li><strong>Menandai tugas sebagai selesai</strong> — Klik "Selesai" jika tugasnya sudah dikerjakan.</li>
+          <li><strong>Menghapus tugas</strong> — jika tugasnya sudah tidak diperlukan.</li>
+        </ul>
+        <p>Cocok untuk mencatat tugas kuliah, belanja, atau hal-hal kecil lainnya.</p>
+      </details>
+
+      <!-- Bagian utama to-do list -->
+      <section id="todo-section">
+        <h2>Daftar Tugas</h2>
+        <!-- Form untuk menambahkan tugas baru -->
+        <form id="todo-form" class="todo-form">
+          <!-- Input tempat kita nulis tugas -->
+          <input type="text" id="todo-input" placeholder="Tugas apa nih?" required />
+          <!-- Tombol buat nambahin tugas ke daftar -->
+          <button type="submit">Tambah</button>
+        </form>
+        <!-- Tempat munculnya daftar tugas yang sudah dimasukkan -->
+        <ul id="todo-list" class="todo-list"></ul>
+      </section>
+
+      <!-- Penjelasan fitur Pomodoro -->
+      <details class="info-box">
+        <summary><strong>Pomodoro Timer</strong></summary>
+        <p>
+          Teknik <strong>Pomodoro</strong> membagi waktu kerja jadi 25 menit fokus, lalu istirahat 5 menit. Tujuannya biar nggak cepat capek dan tetap fokus.
+        </p>
+        <ul>
+          <li><strong>Mulai</strong> — Memulai hitungan waktu 25 menit kerja.</li>
+          <li><strong>Jeda</strong> — Pause timer kalau butuh istirahat sebentar.</li>
+          <li><strong>Reset</strong> — Mengatur ulang timer ke awal (25 menit).</li>
+        </ul>
+      </details>
+
+      <!-- Bagian utama Pomodoro Timer -->
+      <section id="pomodoro-section">
+        <h2>Timer Pomodoro</h2>
+        <!-- Tampilan waktu -->
+        <div id="pomodoro-timer">25:00</div>
+        <!-- Tombol kontrol Pomodoro -->
+        <div class="timer-controls">
+          <button id="start-btn">Mulai</button>
+          <button id="pause-btn">Jeda</button>
+          <button id="reset-btn">Reset</button>
+        </div>
+      </section>
+
+      <!-- Penjelasan fitur Eisenhower Matrix -->
+      <details class="info-box">
+        <summary><strong>Eisenhower Matrix</strong></summary>
+        <p>
+          Fitur ini bantu kamu memilih tugas mana yang harus dikerjakan dulu.
+        </p>
+        <ul>
+          <li><strong>Mendesak & Penting</strong> — Harus langsung dikerjakan dan penting banget.</li>
+          <li><strong>Tidak Mendesak Tapi Penting</strong> — Penting tapi bisa dikerjain nanti.</li>
+          <li><strong>Mendesak Tapi Tidak Penting</strong> — Harus cepat selesai tapi nggak terlalu penting.</li>
+          <li><strong>Tidak Mendesak & Tidak Penting</strong> — Bisa diabaikan dulu atau dikerjain kapan-kapan.</li>
+        </ul>
+      </details>
+
+      <!-- Bagian utama Eisenhower Matrix -->
+      <section id="matrix-section">
+        <h2>Eisenhower Matrix</h2>
+        <!-- Form untuk menambahkan tugas dan memilih kategori -->
+        <form id="matrix-form">
+          <input type="text" id="matrix-input" placeholder="Tugas Matrix..." required />
+          <!-- Dropdown buat pilih kategori tugas -->
+          <select id="matrix-category">
+            <option value="urgent-important">Mendesak & Penting</option>
+            <option value="not-urgent-important">Tidak Mendesak Tapi Penting</option>
+            <option value="urgent-not-important">Mendesak Tapi Tidak Penting</option>
+            <option value="not-urgent-not-important">Tidak Mendesak & Tidak Penting</option>
+          </select>
+          <button type="submit">Tambah</button>
+        </form>
+
+        <!-- Tempat menampilkan tugas-tugas sesuai kategori -->
+        <div class="matrix-grid">
+          <div class="matrix-box matrix-cell" data-category="urgent-important">
+            <h3>Mendesak & Penting</h3>
+            <ul></ul>
+          </div>
+          <div class="matrix-box matrix-cell" data-category="not-urgent-important">
+            <h3>Tidak Mendesak Tapi Penting</h3>
+            <ul></ul>
+          </div>
+          <div class="matrix-box matrix-cell" data-category="urgent-not-important">
+            <h3>Mendesak Tapi Tidak Penting</h3>
+            <ul></ul>
+          </div>
+          <div class="matrix-box matrix-cell" data-category="not-urgent-not-important">
+            <h3>Tidak Mendesak & Tidak Penting</h3>
+            <ul></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Penjelasan fitur Getting Things Done (GTD) -->
+      <details class="info-box">
+        <summary><strong>Getting Things Done</strong></summary>
+        <p>
+          <strong>Getting Things Done (GTD)</strong> adalah cara ngatur tugas supaya nggak bikin stres.
+        </p>
+        <ul>
+          <li><strong>Inbox</strong> — Semua tugas baru ditampung di sini dulu.</li>
+          <li><strong>Next Actions</strong> — Tugas yang bisa langsung dikerjakan.</li>
+          <li><strong>Waiting For</strong> — Tugas yang nungguin orang lain dulu.</li>
+          <li><strong>Projects</strong> — Kumpulan tugas yang masuk dalam 1 proyek.</li>
+          <li><strong>Someday/Maybe</strong> — Ide atau rencana yang belum pasti.</li>
+        </ul>
+      </details>
+
+      <!-- Bagian utama Getting Things Done -->
+      <section id="gtd-section">
+        <h2>Getting Things Done (GTD)</h2>
+        <!-- Form input tugas dan kategori GTD -->
+        <form id="gtd-form">
+          <input type="text" id="gtd-input" placeholder="Tugas GTD..." required />
+          <!-- Dropdown untuk pilih kategori GTD -->
+          <select id="gtd-category">
+            <option value="inbox">Inbox</option>
+            <option value="next-actions">Next Actions</option>
+            <option value="waiting-for">Waiting For</option>
+            <option value="projects">Projects</option>
+            <option value="someday-maybe">Someday/Maybe</option>
+          </select>
+          <button type="submit">Tambah</button>
+        </form>
+
+        <!-- Tempat daftar tugas per kategori GTD -->
+        <div id="gtd-lists">
+          <div class="gtd-box">
+            <h3>Inbox</h3>
+            <ul id="gtd-inbox"></ul>
+          </div>
+          <div class="gtd-box">
+            <h3>Next Actions</h3>
+            <ul id="gtd-next-actions"></ul>
+          </div>
+          <div class="gtd-box">
+            <h3>Waiting For</h3>
+            <ul id="gtd-waiting-for"></ul>
+          </div>
+          <div class="gtd-box">
+            <h3>Projects</h3>
+            <ul id="gtd-projects"></ul>
+          </div>
+          <div class="gtd-box">
+            <h3>Someday/Maybe</h3>
+            <ul id="gtd-someday-maybe"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bagian footer (bawah) halaman -->
+    <footer>
+      <p>&copy; 2025 Dashboard Produktivitas oleh Muhammad Sabda Arif-122140218-RB</p>
+    </footer>
+  </div>
+
+  <!-- Menyambungkan file JavaScript utama yang pakai ES6 module -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
