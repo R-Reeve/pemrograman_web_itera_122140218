@@ -1,22 +1,17 @@
-# 🧀 CheeseNote - Personal Productivity Dashboard
+# CheeseNote - Dashboard Produktivitas Super Gampang
 
-CheeseNote adalah aplikasi dashboard produktivitas berbasis web yang menggabungkan berbagai teknik manajemen waktu dan tugas seperti:
+**CheeseNote** adalah aplikasi web sederhana buat bantu kamu jadi lebih produktif. Gak perlu daftar, gak perlu internet. Langsung pakai aja!
 
-- ✅ Todo List
-- ⏳ Pomodoro Timer
-- 🧠 Eisenhower Matrix
-- 📌 Getting Things Done (GTD)
+Kamu bisa:
+- Nulis daftar tugas (Todo List)
+- Pakai timer kerja (Pomodoro)
+- Atur prioritas tugas (Eisenhower Matrix)
+- Kelola tugas dengan metode GTD (Getting Things Done)
 
-Semua data tersimpan di localStorage, jadi kamu bisa gunakan offline tanpa login.
+Semua data disimpan otomatis di browser kamu. Jadi gak usah takut datanya hilang. Bisa dipakai offline juga!
 
-## 🎮 Fitur
-- **Todo List:** Tambah/edit/hapus tugas harian.
-- **Pomodoro Timer:** Teknik kerja fokus 25 menit.
-- **Eisenhower Matrix:** Prioritas tugas berdasarkan urgensi & pentingnya.
-- **GTD (Getting Things Done):** Kategorisasi tugas berdasarkan alur kerja produktif.
-
-## 🚀 Cara Menjalankan
-1. Clone repositori:
-   ```bash
-   git clone https://github.com/username/cheesenote.git
-   cd cheesenote
+## Fitur-fitur Keren
+- **Todo List:** Tulis, edit, atau hapus tugas harian dengan mudah.
+- **Pomodoro Timer:** Bekerja fokus selama 25 menit, lalu istirahat. Ulangi sampai selesai!
+- **Eisenhower Matrix:** Bantu kamu milih tugas mana yang penting dan mendesak.
+- **GTD:** Bagi tugas jadi beberapa kategori biar gak bingung ngerjainnya.

@@ -22,7 +22,7 @@ export class PomodoroTimer {
           this.updateDisplay(); // Update tampilan waktu di layar
         } else {
           this.stop();         // Kalau waktu habis, hentikan timer
-          alert('Waktu habis! Saatnya istirahat. 🧀'); // Kasih alert
+          alert('Waktu habis! Saatnya istirahat.'); // Kasih alert
         }
       }, 1000); // Timer jalan setiap 1000ms = 1 detik
     }
