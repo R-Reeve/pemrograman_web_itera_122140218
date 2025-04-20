@@ -1,6 +1,4 @@
-/* src/App.css */
-
-/* Body dan container umum */
+/* Mengatur tampilan dasar halaman */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f0f8ff;
@@ -9,7 +7,7 @@ body {
   color: #333;
 }
 
-/* Navigasi */
+/* Navigasi atas */
 nav {
   display: flex;
   justify-content: flex-start;
@@ -18,6 +16,7 @@ nav {
   padding-left: 1rem;
 }
 
+/* Link menu navigasi (Home dan Statistik) */
 nav a.home, nav a.stats {
   padding: 1rem 1.5rem;
   font-size: 1.1rem;
@@ -34,7 +33,7 @@ nav a.home:hover, nav a.stats:hover {
   transform: translateY(-2px);
 }
 
-/* Container utama */
+/* Kontainer utama yang membungkus semua isi halaman */
 .container {
   max-width: 900px;
   margin: 2rem auto;
@@ -44,7 +43,7 @@ nav a.home:hover, nav a.stats:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* Judul halaman */
+/* Judul utama halaman */
 h1 {
   text-align: center;
   margin-bottom: 2rem;
@@ -52,7 +51,7 @@ h1 {
   font-size: 2rem;
 }
 
-/* Paragraf umum */
+/* Paragraf deskripsi */
 p {
   text-align: center;
   font-size: 1.1rem;
@@ -60,12 +59,12 @@ p {
   margin-bottom: 2rem;
 }
 
-/* Section */
+/* Setiap section memiliki margin bawah */
 section {
   margin-bottom: 3rem;
 }
 
-/* Heading tiap section */
+/* Judul per section */
 h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -73,7 +72,7 @@ h2 {
   text-align: center;
 }
 
-/* Form Tambah Buku */
+/* Form input untuk menambahkan data buku */
 form {
   display: flex;
   flex-direction: column;
@@ -81,7 +80,7 @@ form {
   margin-bottom: 2rem;
 }
 
-/* Input panjang dan nyaman untuk mengisi data buku */
+/* Input teks, dropdown, dan textarea */
 input[type='text'],
 select,
 textarea {
@@ -90,11 +89,10 @@ textarea {
   border: 1px solid #ccc;
   font-size: 1.05rem;
   width: 100%;
-  max-width: 100%;
   box-sizing: border-box;
 }
 
-/* Tambahan untuk textarea jika digunakan (misalnya deskripsi buku) */
+/* Khusus untuk textarea */
 textarea {
   min-height: 120px;
   resize: vertical;
@@ -102,7 +100,6 @@ textarea {
 
 /* Tombol utama */
 button {
-  display: inline-block;
   padding: 0.75rem 1.5rem;
   background-color: #6bbf73;
   color: white;
@@ -118,13 +115,14 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/* Daftar Buku */
+/* Daftar buku */
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* Setiap item buku */
 li {
   background-color: #f9fafb;
   padding: 1rem;
@@ -142,6 +140,7 @@ li:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Nama atau judul buku */
 li strong {
   display: block;
   font-size: 1.1rem;
@@ -150,6 +149,7 @@ li strong {
   color: #4f6d7a;
 }
 
+/* Detail isi buku */
 li .book-details {
   display: flex;
   flex-direction: column;
@@ -157,6 +157,7 @@ li .book-details {
   flex-grow: 1;
 }
 
+/* Tombol aksi (edit dan hapus) */
 li .book-actions {
   display: flex;
   flex-direction: column;
@@ -164,12 +165,11 @@ li .book-actions {
   align-items: flex-end;
 }
 
-/* Tombol aksi */
+/* Tombol aksi individual */
 .book-actions button {
   width: 100px;
   padding: 0.5rem 0;
   font-size: 0.9rem;
-  text-align: center;
   background-color: #6bbf73;
   color: white;
   border: none;
@@ -183,8 +183,7 @@ li .book-actions {
   transform: translateY(-2px);
 }
 
-
-/* Statistik Buku */
+/* Kontainer untuk statistik buku */
 .stats-container {
   text-align: center;
   margin: 2rem auto;
@@ -195,13 +194,14 @@ li .book-actions {
   max-width: 900px;
 }
 
+/* Judul halaman statistik */
 .stats-container h1 {
   font-size: 2rem;
   color: #4f6d7a;
   margin-bottom: 2rem;
 }
 
-/* Grid Statistik */
+/* Grid statistik dua kolom */
 .stats-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -210,7 +210,7 @@ li .book-actions {
   margin-top: 1rem;
 }
 
-/* Kartu Statistik */
+/* Kartu individu untuk statistik */
 .stat-card {
   background-color: #f9fafb;
   padding: 1.5rem;
@@ -225,19 +225,21 @@ li .book-actions {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Judul dalam kartu statistik */
 .stat-card h3 {
   font-size: 1.2rem;
   color: #5ca0d3;
   margin-bottom: 1rem;
 }
 
+/* Nilai statistik */
 .stat-card p {
   font-size: 1.5rem;
   font-weight: 600;
   color: #333;
 }
 
-/* Responsive */
+/* Responsif untuk mobile */
 @media (max-width: 600px) {
   .stats-cards {
     grid-template-columns: 1fr;
@@ -256,6 +258,7 @@ li .book-actions {
   }
 }
 
+/* Komponen kartu umum */
 .card {
   background-color: #ffffff;
   padding: 1.5rem;

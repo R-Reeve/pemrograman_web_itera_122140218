@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 
+// Custom hook untuk menyimpan dan membaca data dari localStorage
 function useLocalStorage(key, initialValue) {
+  // Ambil data awal dari localStorage (jika ada), jika tidak ada pakai nilai default
   const [storedValue, setStoredValue] = useState(() => {
     try {
       const item = window.localStorage.getItem(key);
@@ -11,10 +13,12 @@ function useLocalStorage(key, initialValue) {
     }
   });
 
+  // Setiap kali nilai berubah, simpan ulang ke localStorage
   useEffect(() => {
     window.localStorage.setItem(key, JSON.stringify(storedValue));
   }, [key, storedValue]);
 
+  // Mengembalikan nilai yang tersimpan dan fungsi untuk mengubahnya
   return [storedValue, setStoredValue];
 }
 

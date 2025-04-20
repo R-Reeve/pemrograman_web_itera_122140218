@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import { useBooks } from '../../context/BookContext';
 
 const BookList = ({ onEdit }) => {
-  const { books, deleteBook, filter } = useBooks();
+  const { books, deleteBook, filter } = useBooks(); // Mengambil data dan fungsi dari context
 
+  // Filter buku berdasarkan status dan judul
   const filteredBooks = books.filter((book) => {
     return (
-      (filter.status === 'all' || book.status === filter.status) &&
-      book.title.toLowerCase().includes(filter.search.toLowerCase())
+      (filter.status === 'all' || book.status === filter.status) && // Filter status
+      book.title.toLowerCase().includes(filter.search.toLowerCase()) // Filter pencarian
     );
   });
 
@@ -22,6 +23,7 @@ const BookList = ({ onEdit }) => {
             <span>Status: {book.status}</span>
           </div>
           <div className="book-actions">
+            {/* Tombol untuk mengedit dan menghapus buku */}
             <button onClick={() => onEdit(book)}>Edit</button>
             <button onClick={() => deleteBook(book.id)}>Hapus</button>
           </div>
@@ -31,6 +33,7 @@ const BookList = ({ onEdit }) => {
   );
 };
 
+// Validasi props
 BookList.propTypes = {
   onEdit: PropTypes.func.isRequired,
 };
