@@ -12,35 +12,34 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Aplikasi Manajemen Buku</h1>
-      <p>
-        Dengan aplikasi ini, Anda dapat menambah, mengedit, dan mengelola koleksi buku pribadi Anda dengan mudah.
+      <h1 className="text-3xl font-bold mb-2">Aplikasi Manajemen Buku</h1>
+      <p className="mb-6">
+        Aplikasi ini membantu Anda mencatat, menyimpan, dan mengelola koleksi buku pribadi secara praktis. Anda bisa menambahkan buku baru, mengedit informasi buku yang sudah ada, menyaring berdasarkan status bacaan, dan menghapus buku yang tidak lagi dibutuhkan.
       </p>
 
-      {/* Penjelasan untuk form buku */}
-      <section>
-        <h2>Tambah atau Edit Buku</h2>
-        <p>
-          Gunakan form di bawah ini untuk menambah buku baru ke dalam koleksi Anda, atau mengedit detail buku yang sudah ada.
+      {/* Form Tambah/Edit Buku */}
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-1">Tambah atau Edit Buku</h2>
+        <p className="mb-4">
+          Untuk menambahkan buku baru, isi formulir di bawah dengan judul buku, nama penulis, dan pilih status baca (seperti “Sedang Dibaca” atau “Selesai Dibaca”). Setelah itu, klik tombol <strong>Simpan</strong> untuk menambahkan ke daftar. Jika ingin mengubah informasi buku yang sudah ada, klik tombol <strong>Edit</strong> pada daftar buku di bawah, maka data buku akan muncul otomatis di formulir. Setelah melakukan perubahan, klik <strong>Simpan</strong> kembali untuk memperbaruinya.
         </p>
         <BookForm editingBook={editingBook} onFinish={handleFinishForm} />
       </section>
 
-      {/* Penjelasan untuk filter buku */}
-      <section>
-        <h2>Filter Buku</h2>
-        <p>
-          Anda dapat menyaring buku berdasarkan status seperti "Sedang Dibaca", "Selesai Dibaca", atau "Ingin Dibaca". 
-          Ini akan membantu Anda untuk lebih mudah mengelola koleksi buku Anda.
+      {/* Filter Buku */}
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-1">Filter Buku</h2>
+        <p className="mb-4">
+          Anda bisa menggunakan fitur filter untuk menyaring buku berdasarkan status bacaan. Pilih kategori seperti “Sedang Dibaca”, “Selesai Dibaca”, atau “Ingin Dibaca” untuk hanya menampilkan buku sesuai pilihan Anda. Jika ingin menampilkan semua buku kembali, cukup pilih opsi “Semua”. Fitur ini membantu Anda melihat daftar buku dengan lebih tertata sesuai kebutuhan.
         </p>
         <BookFilter />
       </section>
 
-      {/* Penjelasan untuk daftar buku */}
+      {/* Daftar Buku */}
       <section>
-        <h2>Daftar Buku Anda</h2>
-        <p>
-          Di sini Anda dapat melihat semua buku yang telah Anda tambahkan ke dalam koleksi Anda. Anda juga dapat mengedit atau menghapus buku dari daftar ini.
+        <h2 className="text-2xl font-semibold mb-1">Daftar Buku Anda</h2>
+        <p className="mb-4">
+          Semua buku yang Anda tambahkan akan muncul di bagian ini. Setiap buku ditampilkan lengkap dengan judul, penulis, dan status bacaan. Anda bisa mengedit informasi buku dengan klik tombol <strong>Edit</strong>, atau menghapus buku dengan klik tombol <strong>Hapus</strong>. Daftar ini terus diperbarui setiap kali Anda menambah, mengubah, atau menghapus buku.
         </p>
         <BookList onEdit={setEditingBook} />
       </section>
