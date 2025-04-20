@@ -5,7 +5,7 @@ import { useBooks } from '../../context/BookContext';
 const defaultForm = {
   title: '',
   author: '',
-  status: 'owned', // default status
+  status: 'owned',
 };
 
 const BookForm = ({ editingBook, onFinish }) => {
@@ -27,42 +27,59 @@ const BookForm = ({ editingBook, onFinish }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!form.title || !form.author) return alert('Judul dan penulis wajib diisi!');
-
-    if (editingBook) {
-      updateBook(form);
-    } else {
-      addBook(form);
+    if (!form.title || !form.author) {
+      return alert('Judul dan penulis wajib diisi!');
     }
+
+    editingBook ? updateBook(form) : addBook(form);
     onFinish();
     setForm(defaultForm);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="title"
-        value={form.title}
-        onChange={handleChange}
-        placeholder="Judul Buku"
-        required
-      />
-      <input
-        type="text"
-        name="author"
-        value={form.author}
-        onChange={handleChange}
-        placeholder="Penulis"
-        required
-      />
-      <select name="status" value={form.status} onChange={handleChange}>
-        <option value="owned">Dimiliki</option>
-        <option value="reading">Sedang Dibaca</option>
-        <option value="wishlist">Ingin Dibeli</option>
-      </select>
-      <button type="submit">{editingBook ? 'Update' : 'Tambah'}</button>
-    </form>
+    <div className="card">
+      <h2>{editingBook ? 'Edit Buku' : 'Tambah Buku Baru'}</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="title">Judul Buku</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            value={form.title}
+            onChange={handleChange}
+            placeholder="Contoh: Laskar Pelangi"
+            required
+          />
+        </div>
+
+        <div>
+          <label htmlFor="author">Penulis</label>
+          <input
+            type="text"
+            id="author"
+            name="author"
+            value={form.author}
+            onChange={handleChange}
+            placeholder="Contoh: Andrea Hirata"
+            required
+          />
+        </div>
+
+        <div>
+          <label htmlFor="status">Status</label>
+          <select id="status" name="status" value={form.status} onChange={handleChange}>
+            <option value="owned">Dimiliki</option>
+            <option value="reading">Sedang Dibaca</option>
+            <option value="wishlist">Ingin Dibeli</option>
+          </select>
+        </div>
+
+        <button type="submit">
+          {editingBook ? 'Simpan Perubahan' : 'Tambahkan Buku'}
+        </button>
+      </form>
+    </div>
   );
 };
 

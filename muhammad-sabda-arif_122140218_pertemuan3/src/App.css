@@ -3,7 +3,7 @@
 /* Body dan container umum */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f8ff; /* Background biru muda yang menenangkan */
+  background-color: #f0f8ff;
   margin: 0;
   padding: 0;
   color: #333;
@@ -12,30 +12,29 @@ body {
 /* Navigasi */
 nav {
   display: flex;
-  justify-content: flex-start; /* Menempatkan tombol di ujung kiri */
+  justify-content: flex-start;
   gap: 2rem;
   margin: 1.5rem 0;
-  padding-left: 1rem; /* Menambahkan sedikit jarak ke kiri */
+  padding-left: 1rem;
 }
 
-/* Link untuk Home dan Statistik */
 nav a.home, nav a.stats {
-  padding: 1rem 1.5rem; /* Menambahkan padding agar tombol lebih besar */
-  font-size: 1.1rem; /* Menyesuaikan ukuran font untuk lebih serasi */
-  border-radius: 8px; /* Sudut tombol tetap melengkung */
-  background-color: #6bbf73; /* Warna tombol tetap hijau */
-  color: white; /* Warna teks putih */
-  text-decoration: none; /* Menghapus underline default */
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  background-color: #6bbf73;
+  color: white;
+  text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 nav a.home:hover, nav a.stats:hover {
-  background-color: #5a9e65; /* Tombol berubah warna lebih gelap saat hover */
-  transform: translateY(-2px); /* Efek hover dengan sedikit pergeseran */
+  background-color: #5a9e65;
+  transform: translateY(-2px);
 }
 
-/* Container utama untuk konten */
+/* Container utama */
 .container {
   max-width: 900px;
   margin: 2rem auto;
@@ -49,32 +48,32 @@ nav a.home:hover, nav a.stats:hover {
 h1 {
   text-align: center;
   margin-bottom: 2rem;
-  color: #4f6d7a; /* Warna gelap yang lebih lembut */
+  color: #4f6d7a;
   font-size: 2rem;
 }
 
-/* Deskripsi umum halaman */
+/* Paragraf umum */
 p {
   text-align: center;
   font-size: 1.1rem;
-  color: #666; /* Warna abu-abu gelap yang lebih lembut */
+  color: #666;
   margin-bottom: 2rem;
 }
 
-/* Bagian Section untuk form, filter, dan daftar buku */
+/* Section */
 section {
   margin-bottom: 3rem;
 }
 
-/* Heading untuk setiap bagian */
+/* Heading tiap section */
 h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #5ca0d3; /* Biru muda yang menenangkan */
+  color: #5ca0d3;
   text-align: center;
 }
 
-/* Form untuk daftar buku */
+/* Form Tambah Buku */
 form {
   display: flex;
   flex-direction: column;
@@ -82,32 +81,44 @@ form {
   margin-bottom: 2rem;
 }
 
+/* Input panjang dan nyaman untuk mengisi data buku */
 input[type='text'],
-select {
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
+select,
+textarea {
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px;
   border: 1px solid #ccc;
-  font-size: 1rem;
+  font-size: 1.05rem;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-/* Tombol utama (submit) untuk form */
+/* Tambahan untuk textarea jika digunakan (misalnya deskripsi buku) */
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Tombol utama */
 button {
-  padding: 0.75rem 1rem;
-  background-color: #6bbf73; /* Hijau muda yang menenangkan */
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #6bbf73;
   color: white;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #5a9e65; /* Hijau yang sedikit lebih gelap saat hover */
+  background-color: #5a9e65;
+  transform: translateY(-2px);
 }
 
-/* Daftar buku */
+/* Daftar Buku */
 ul {
   list-style: none;
   padding: 0;
@@ -115,28 +126,28 @@ ul {
 }
 
 li {
-  background-color: #f9fafb; /* Warna latar belakang buku yang lebih lembut */
+  background-color: #f9fafb;
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 li:hover {
-  transform: translateY(-4px); /* Efek hover untuk kesan interaktif */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Bayangan lebih tebal saat hover */
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 li strong {
   display: block;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
-  font-weight: 600; /* Menonjolkan judul buku */
-  color: #4f6d7a; /* Warna judul buku yang lembut */
+  font-weight: 600;
+  color: #4f6d7a;
 }
 
 li .book-details {
@@ -150,25 +161,28 @@ li .book-actions {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  align-items: flex-end; /* Tombol aksi di kanan */
+  align-items: flex-end;
 }
 
 /* Tombol aksi */
-button {
-  padding: 0.5rem 1rem;
-  background-color: #6bbf73; /* Hijau muda yang menenangkan */
+.book-actions button {
+  width: 100px;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+  background-color: #6bbf73;
   color: white;
   border: none;
-  border-radius: 8px;
-  font-size: 0.9rem;
+  border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
-  background-color: #5a9e65; /* Hijau lebih gelap saat hover */
+.book-actions button:hover {
+  background-color: #5a9e65;
   transform: translateY(-2px);
 }
+
 
 /* Statistik Buku */
 .stats-container {
@@ -187,16 +201,16 @@ button:hover {
   margin-bottom: 2rem;
 }
 
-/* Grid untuk menampilkan statistik */
+/* Grid Statistik */
 .stats-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Menampilkan 2 card per baris */
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   padding: 0 1rem;
   margin-top: 1rem;
 }
 
-/* Kartu statistik */
+/* Kartu Statistik */
 .stat-card {
   background-color: #f9fafb;
   padding: 1.5rem;
@@ -223,21 +237,35 @@ button:hover {
   color: #333;
 }
 
-/* Responsif untuk tampilan mobile */
+/* Responsive */
 @media (max-width: 600px) {
   .stats-cards {
-    grid-template-columns: 1fr; /* Satu kolom per baris pada perangkat kecil */
+    grid-template-columns: 1fr;
   }
 }
 
 @media (min-width: 600px) {
   .stats-cards {
-    grid-template-columns: repeat(2, 1fr); /* Dua card per baris pada perangkat lebih besar */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 900px) {
   .stats-cards {
-    grid-template-columns: repeat(2, 1fr); /* Menjaga dua card per baris pada layar lebih besar */
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  text-align: center;
+  color: #5ca0d3;
+  margin-bottom: 1rem;
 }

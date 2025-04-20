@@ -6,7 +6,7 @@ const Stats = () => {
 
   return (
     <div className="stats-container">
-      <h1>📊 Statistik Buku</h1>
+      <h1>Statistik Buku</h1>
       <div className="stats-cards">
         <div className="stat-card">
           <h3>Total Buku</h3>

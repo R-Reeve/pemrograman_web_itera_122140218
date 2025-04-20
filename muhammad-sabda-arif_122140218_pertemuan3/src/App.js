@@ -10,8 +10,8 @@ function App() {
     <BookProvider>
       <Router>
         <nav>
-          <Link to="/" className="home">🏠 Home</Link>
-          <Link to="/stats" className="stats">📊 Statistik</Link>
+          <Link to="/" className="home">Home</Link>
+          <Link to="/stats" className="stats">Statistik</Link>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />

@@ -16,9 +16,15 @@ const BookList = ({ onEdit }) => {
     <ul>
       {filteredBooks.map((book) => (
         <li key={book.id}>
-          <strong>{book.title}</strong> - {book.author} ({book.status})
-          <button onClick={() => onEdit(book)}>Edit</button>
-          <button onClick={() => deleteBook(book.id)}>Hapus</button>
+          <div className="book-details">
+            <strong>{book.title}</strong>
+            <span>Penulis: {book.author}</span>
+            <span>Status: {book.status}</span>
+          </div>
+          <div className="book-actions">
+            <button onClick={() => onEdit(book)}>Edit</button>
+            <button onClick={() => deleteBook(book.id)}>Hapus</button>
+          </div>
         </li>
       ))}
     </ul>

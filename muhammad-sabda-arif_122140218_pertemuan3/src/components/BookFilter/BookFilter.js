@@ -13,19 +13,36 @@ const BookFilter = () => {
   };
 
   return (
-    <div>
-      <select value={filter.status} onChange={handleStatusChange}>
-        <option value="all">Semua</option>
-        <option value="owned">Dimiliki</option>
-        <option value="reading">Sedang Dibaca</option>
-        <option value="wishlist">Ingin Dibeli</option>
-      </select>
-      <input
-        type="text"
-        value={filter.search}
-        onChange={handleSearchChange}
-        placeholder="Cari judul..."
-      />
+    <div className="card">
+      <h2>Filter Buku</h2>
+      <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', width: '100%' }}>
+          <label htmlFor="status">Status Buku</label>
+          <select
+            id="status"
+            value={filter.status}
+            onChange={handleStatusChange}
+            style={{ width: '100%' }}
+          >
+            <option value="all">Semua</option>
+            <option value="owned">Dimiliki</option>
+            <option value="reading">Sedang Dibaca</option>
+            <option value="wishlist">Ingin Dibeli</option>
+          </select>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', width: '100%' }}>
+          <label htmlFor="search">Cari Judul</label>
+          <input
+            id="search"
+            type="text"
+            value={filter.search}
+            onChange={handleSearchChange}
+            placeholder="Contoh: Laskar Pelangi"
+            style={{ width: '100%' }}
+          />
+        </div>
+      </form>
     </div>
   );
 };

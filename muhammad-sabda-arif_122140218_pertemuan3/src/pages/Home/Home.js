@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1>📚 Aplikasi Manajemen Buku</h1>
+      <h1>Aplikasi Manajemen Buku</h1>
       <p>
         Dengan aplikasi ini, Anda dapat menambah, mengedit, dan mengelola koleksi buku pribadi Anda dengan mudah.
       </p>
