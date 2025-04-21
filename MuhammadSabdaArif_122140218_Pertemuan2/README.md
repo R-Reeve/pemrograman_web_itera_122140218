@@ -17,7 +17,7 @@ Semua data disimpan otomatis di browser kamu. Jadi gak usah takut datanya hilang
 - **GTD:** Bagi tugas jadi beberapa kategori biar gak bingung ngerjainnya.
 
 - Hasil Deploy Pertemuan 2 [Klik Disini.](https://pemrograman-web-itera-122140218-pertemuan2.vercel.app)
-**Hasil ScreenShot Halaman**
+## Hasil ScreenShot Halaman
   
   ![Screenshot To-doList](./images/pertemuan2_To-doList.png)
   ![Screenshot Pomodoro](./images/pertemuan2_Pomodoro.png)
