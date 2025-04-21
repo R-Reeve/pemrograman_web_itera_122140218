@@ -16,7 +16,9 @@ Semua data disimpan otomatis di browser kamu. Jadi gak usah takut datanya hilang
 - **Eisenhower Matrix:** Bantu kamu milih tugas mana yang penting dan mendesak.
 - **GTD:** Bagi tugas jadi beberapa kategori biar gak bingung ngerjainnya.
 
-- Hasil Deploy Pertemuan 2 [Klik Disini.](https://pemrograman-web-itera-122140218-pertemuan2.vercel.app)  
+- Hasil Deploy Pertemuan 2 [Klik Disini.](https://pemrograman-web-itera-122140218-pertemuan2.vercel.app)
+**Hasil ScreenShot Halaman**
+  
   ![Screenshot To-doList](./images/pertemuan2_To-doList.png)
   ![Screenshot Pomodoro](./images/pertemuan2_Pomodoro.png)
   ![Screenshot Heisenhower Matrix](./images/pertemuan2_HeisenhowerMatrix.png)
