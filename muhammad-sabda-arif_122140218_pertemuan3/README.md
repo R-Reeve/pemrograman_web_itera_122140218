@@ -21,8 +21,8 @@ Aplikasi ini terdiri dari 3 bagian utama:
    - Menampilkan buku-buku yang ditambahkan  
    - Tombol untuk mengedit atau menghapus buku dari daftar
 
-- Hasil Deploy Pertemuan 3 [Klik Disini.](https://pemrograman-web-itera-122140218-pertemuan3.vercel.app)
-# Hasil ScreenShot Halaman
+## Hasil Deploy Pertemuan 3 [Klik Disini.](https://pemrograman-web-itera-122140218-pertemuan3.vercel.app)
+## Hasil ScreenShot Halaman
   
   ![Screenshot Tambah Buku](./images/TambahBuku.png)
   ![Screenshot Filter Buku](./images/FilterBuku.png)
