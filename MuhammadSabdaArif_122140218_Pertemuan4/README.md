@@ -9,12 +9,15 @@ Menghitung BMI (Body Mass Index) dari berat dan tinggi badan, lalu menampilkan k
 - Berlebih  
 - Obesitas
 
+![Screenshot Hitung BMI](./images/hitungbmi.png)
+
 ---
 
 ## nilai_mhs.py
 Mengolah data mahasiswa (UTS, UAS, Tugas), menghitung nilai akhir, menentukan grade A–E,  
 menampilkan tabel nilai lengkap, serta mahasiswa dengan nilai tertinggi dan terendah.
 
+![Screenshot Nilai Mahasiswa](./images/nilaimhs.png)
 ---
 
 ## math_operations.py
