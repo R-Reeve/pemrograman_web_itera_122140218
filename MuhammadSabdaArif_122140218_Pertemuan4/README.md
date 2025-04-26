@@ -30,3 +30,5 @@ Modul berisi fungsi matematika:
 ## main.py
 Program utama untuk menjalankan semua fungsi dari `math_operations.py`.  
 Menunjukkan cara impor modul secara penuh dan sebagian.
+
+![Screenshot Main](./images/main.png)
